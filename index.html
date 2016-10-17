@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<title>CHECKPOINT 27</title>
+<script src="https://use.edgefonts.net/league-gothic;old-standard.js"></script>
+<style>
+body {
+  padding-top: 450px;
+}
+#header {
+  background-image: url(satheader.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#header-mask {
+  background: black;
+  width: 100%;
+  height: 400px;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5;
+}
+#header-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  font-family: league-gothic;
+  text-align: center;
+  color: white;
+  line-height: 400px;
+}
+.bigp {
+  font-family: old-standard;
+  width: 900px;
+  position: relative;
+  left:50%;
+  margin-left:-450px;
+  font-size:30pt;
+  text-align: center;
+  margin-top: 20px;
+}
+.hr {
+  width: 100%;
+  position: relative;
+  left: 0;
+  height: 1px;
+  border-top: 2px dashed #000000;
+  margin-top: 100px;
+}
+h2 {
+  background: white;
+  position: relative;
+  margin-top: -40px;
+  font-family: old-standard;
+  font-style: italic;
+  font-size: 50px;
+  text-align: center;
+  width: 250px;
+  margin-left: -125px;
+  left: 50%;
+}
+#map {
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+  width: 900px;
+  height: 500px;
+}
+#fin {
+  margin-top: 50px;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+</style>
+
+<div id = "header"></div>
+<div id = "header-mask"></div>
+<div id = "header-text">CHECKPOINT 27</div>
+
+<div class = "bigp">
+Situated in the beautiful Kentish countryside, <br>Checkpoint 27 prides itself on a truly unique experience.
+</div>
+<div class = "hr"></div>
+<h2>History</h2>
+
+<div class = "bigp">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies lorem quis sem convallis mattis. Proin et accumsan mauris. Praesent viverra magna ligula, ac lacinia enim convallis vitae. Aenean fermentum eu ante id dignissim. Donec sit amet mauris eget ex finibus dictum vestibulum at orci.
+</div>
+
+<div class = "hr"></div>
+<h2>Location</h2>
+<div id = "map">
+</div>
+<div class = "hr"></div>
+<h2>Contact</h2>
+<div class = "bigp">
+<a href = "mailto:jomo@checkpoint27.com">jomo@checkpoint27.com</a><br>
+<a href = "mailto:cal@checkpoint27.com">cal@checkpoint27.com</a><br>
+<a href = "mailto:charutha@checkpoint27.com">charutha@checkpoint27.com</a>
+</div>
+<div id = "fin"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
+<script>
+  jQuery("#header-text").fitText(0.5);
+
+</script>
+
+
+<script>
+      function initMap() {
+        var uluru = {lat: 51.235825, lng: 1.031938};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru,
+          mapTypeId: 'hybrid',
+          disableDefaultUI: true
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbHECg47FhA6626oaPwzmkqPsho6ti5JI&callback=initMap">
+    </script>
